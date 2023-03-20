@@ -1,4 +1,4 @@
-![](UTA-DataScience-Logo.png)
+![](https://user-images.githubusercontent.com/89792487/208189079-d4fc4d67-01bc-4397-891e-52f05330eb12.png)
 
 # CalculatingGrowthRateFromSyntheticData
 
