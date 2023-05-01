@@ -1,12 +1,15 @@
 ![](https://user-images.githubusercontent.com/89792487/208189079-d4fc4d67-01bc-4397-891e-52f05330eb12.png)
 
-# CalculatingGrowthRateFromSyntheticData
+# Generating Synthetic AFM Scans 
 
-* This repository holds an attempt to use synthetic AFM scans created using a modular 2-dimensional gaussian to establish an acceptable baseline growth rate to then compare against growth rates from real scans. 
+* This repository holds an attempt to use create synthetic AFM scans using... 
+  * 2-dimensional (multivariate) gaussians
+  * 2-dimensional hemispheres
+to establish an acceptable baseline growth rate to then compare against growth rates from real scans. 
 
 ## Overview
 
-The purpose for the task above is to provide a quantitatively supported description of the growth rate of the samples represented in the AFM images. Being able to define a growth rate for a reaction has many important applications that can be built on, resulting in unique findings. Defining a growth rate, for this specific application, involves analyzing relative maxima/minima of cross sections sliced from a scan. Making statistical calculations such as averages and standard deviations are also paramount to reliable growth rates.
+The purpose for the task above is to generate quantitatively supported synthetic AFM image data (2d-arrays) for the purpose of having enough training/testing data for a model that can return a growth rate based on time-series scans. Being able to define a growth rate for a reaction has many important applications that can be built on, resulting in unique findings. Defining a growth rate, for this specific application, involves analyzing relative maxima/minima of cross sections sliced from a scan. Making statistical calculations such as averages and standard deviations are also paramount to reliable growth rates.
 
 ## Summary of Workdone
 ### Data
@@ -16,7 +19,7 @@ The purpose for the task above is to provide a quantitatively supported descript
     * Input: AFM Images (512x512 pixel jpegs, ~4600KB), CSV file: image filename -> respective growth rate
     * Input: CSV file of features, output: signal/background flag in 1st column.
   * Size: 20+ Scans
-  * Instances (Train, Test, Validation Split): ~10 scans will be used to create synthetic data. Several synthetic scans will be yielded from the synthetic generation.  The initial ~10 scans will be used to test.
+  * Instances (Train, Test, Validation Split): ~5 scans will be used to create synthetic data. Several synthetic scans will be yielded from the synthetic generation.  The initial ~5 scans will be used to test.
 
 #### Preprocessing / Clean up
 
@@ -24,20 +27,15 @@ The purpose for the task above is to provide a quantitatively supported descript
 
 ## Peek at Data
 
-* Sample AFM Scan 
+* Sample of different grain morphologies AFM scans.
 
 
-![image](https://user-images.githubusercontent.com/89792487/212432540-05ced332-745d-42fc-bdb3-939de5e49fca.png)
+![image](https://user-images.githubusercontent.com/89792487/235526891-1a261fdc-9716-4b97-9bfe-bd2055f0b2f5.png)
 
-* Crossection of above white line
+* Sample crossection.
 
 
 ![image](https://user-images.githubusercontent.com/89792487/212432672-36cc6c40-362b-4877-9783-e73c8fdedfa6.png)
-
-* Exported matrix of cross-sectional height data
-
-
-![image](https://user-images.githubusercontent.com/89792487/212433676-0b648f85-595f-4275-bfa4-a449eabb1c6b.png)
 
 #### Data Visualization
 
