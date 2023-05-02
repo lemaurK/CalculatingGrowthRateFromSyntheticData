@@ -70,7 +70,7 @@ Show a few visualization of the data and say a few words about what you see.
 
 ## Future Work
 
-*Fill in*
+The purpose for the task above is to generate quantitatively supported synthetic AFM image data (2d-arrays) for the purpose of having enough training/testing data for a model that can return a growth rate based on time-series scans.
 
 ## How to reproduce results
 
