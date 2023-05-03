@@ -62,40 +62,29 @@ Molecules of importance...
 
 ![image](https://user-images.githubusercontent.com/89792487/212432672-36cc6c40-362b-4877-9783-e73c8fdedfa6.png)
 
-#### Data Visualization
+#### Examples of Generated Synthetic Data
 
-Show a few visualization of the data and say a few words about what you see.
+![image](https://user-images.githubusercontent.com/89792487/235924139-2d437afe-50ef-47b5-8e71-6089d053e32f.png)
 
-### Problem Formulation
+![image](https://user-images.githubusercontent.com/89792487/235924287-c0b82085-24e0-4433-8252-e98df8032dfb.png)
 
-* Define:
-  * Input / Output
-  * Models
-    * Describe the different models you tried and why.
-  * Loss, Optimizer, other Hyperparameters.
+![image](https://user-images.githubusercontent.com/89792487/235924425-3031967c-786e-40bf-975f-ca96dca03b83.png)
 
-### Training
+![image](https://user-images.githubusercontent.com/89792487/235924521-7fdb77c4-c1c0-47b3-9c08-ba09c4c77b92.png)
 
-* Describe the training:
-  * How you trained: software and hardware.
-  * How did training take.
-  * Training curves (loss vs epoch for test/train).
-  * How did you decide to stop training.
-  * Any difficulties? How did you resolve them?
+![image](https://user-images.githubusercontent.com/89792487/235924647-bd5a8a73-a0e9-4679-9b11-ca576b9621a5.png)
 
-### Performance Comparison
+![image](https://user-images.githubusercontent.com/89792487/235924787-63aa8e3c-6dc0-41cf-8513-66e28b5f80bd.png)
 
-* Clearly define the key performance metric(s).
-* Show/compare results in one table.
-* Show one (or few) visualization(s) of results, for example ROC curves.
 
 ## Conclusion
 
-* Given that Gwyddion has plenty of analysis capabilities within the software, it was clear growth rate analysis would need to be conducted on its own. Through a series of developing, testing, and comparing the results of my python scripts I landed on a confident model worthy of implementation. There will always be room for improvement, however the structure of the codebase is tailored to be friendly to novices, with debugging capabilities included.
+* It is clear the synthetic data does not capture 100% of the features illustrated in the real data given the two strategies used, however, the hope for a model would be that it could still abstract the features necessary to segment and  classify real scans. The limitations to generating synthetic data showcased in this repo can be crossed by potentially implementing the work of Generative Adverasarial Networks (GAN's), typically used for generating (mimicing) photos and creating new ones based off the control.
 
 ## Future Work
 
-Create, train, and test a deep learning model that can segment, classify, and extract features of AFM Images.
+- Create, train, and test a deep learning model that can segment, classify, and extract features of AFM Images.
+- Generate as many more synthetic images as feasible.
 
 ## How to reproduce results
 
@@ -103,10 +92,9 @@ Create, train, and test a deep learning model that can segment, classify, and ex
 
 ## Overview of files in repository
 
-* AFM Image Data
-* Grain Analysis Jupyter Notebook Script
-* Grain Analysis Python Script
-* Pygwy Console Script
+* Statistical Information Extraction
+* Method 1: 2d (Multivariate) Gaussian Synthetic Data
+* Method 2: 2d Hemispheres Synthetic Data
 
 ## Software Setup and Python Packages Required
 
@@ -127,6 +115,9 @@ Create, train, and test a deep learning model that can segment, classify, and ex
 * Numpy
 * scipy
 * csv
+* tqdm
+* math
+* findpeaks
 
 ## Citations
 
