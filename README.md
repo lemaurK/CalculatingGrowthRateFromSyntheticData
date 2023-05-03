@@ -2,7 +2,7 @@
 
 # Generating Synthetic Atomic Force Microscopy (AFM) Scans 
 
-* This repository holds an attempt to use genreate synthetic AFM scans using... 
+* This repository holds an attempt to use genreate synthetic AFM scans in order to have ample training/testing data for a deep learning model using... 
   * 2-dimensional (multivariate) gaussians
   * 2-dimensional hemispheres 
 
@@ -35,11 +35,6 @@ Molecules of importance...
 - Only focusing on the 11-carbon-chain morphologies because they have granular morphologies, which are better captured by simple relative minima/maxima Python functions.
 - Extracted scan data using [Gwyddion’s](http://gwyddion.net/) (modular program for scanning probe microscopy data visualization and analysis) Python console with the PyGwy package.
 - Developed Python scripts to manipulate data and extract the growth rate of calcium carbonate precipitation.
-
-## bruh 
-Given a reaction between a cleaved crystal of Calcium Carbonate (CaCO3) and a solution of Bisphosphonate molecules with varying carbon-chain lengths 
-
-The purpose for the task above is to generate quantitatively supported synthetic AFM image data (2d-arrays) for the purpose of having enough training/testing data for a model that can return a growth rate based on time-series scans. Being able to define a growth rate for a reaction has many important applications that can be built on, resulting in unique findings. Defining a growth rate, for this specific application, involves analyzing relative maxima/minima of cross sections sliced from a scan. Making statistical calculations such as averages and standard deviations are also paramount to reliable growth rates.
 
 ## Summary of Workdone
 ### Data
@@ -100,7 +95,7 @@ Show a few visualization of the data and say a few words about what you see.
 
 ## Future Work
 
-The purpose for the task above is to generate quantitatively supported synthetic AFM image data (2d-arrays) for the purpose of having enough training/testing data for a model that can return a growth rate based on time-series scans.
+Create, train, and test a deep learning model that can segment, classify, and extract features of AFM Images.
 
 ## How to reproduce results
 
